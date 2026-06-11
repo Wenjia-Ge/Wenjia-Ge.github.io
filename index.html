@@ -6,7 +6,7 @@
   <title>Wenjia Ge | Robotics & Research Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Wenjia Ge, an NYU Tandon M.S. student working across robotics, embodied AI, medical simulation, embedded systems, and numerical methods."
+    content="Portfolio of Wenjia Ge, an NYU Tandon M.S. student working across robotics, embodied AI, spatial intelligence, embedded systems, and computational research."
   >
   <script>
     document.documentElement.classList.add("js");
@@ -17,17 +17,13 @@
   <style>
     :root {
       --bg: #f4efe7;
-      --bg-strong: #efe5d6;
       --paper: rgba(255, 251, 245, 0.88);
       --paper-strong: rgba(255, 252, 248, 0.96);
       --ink: #14202b;
       --muted: #556270;
       --line: rgba(20, 32, 43, 0.12);
       --accent: #d96f32;
-      --accent-soft: rgba(217, 111, 50, 0.14);
       --teal: #0f7a75;
-      --teal-soft: rgba(15, 122, 117, 0.14);
-      --navy: #193549;
       --shadow: 0 24px 60px rgba(20, 32, 43, 0.12);
       --radius-xl: 32px;
       --radius-lg: 24px;
@@ -72,11 +68,6 @@
     a {
       color: inherit;
       text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
     }
 
     .page {
@@ -126,17 +117,34 @@
       gap: 14px;
       color: var(--muted);
       font-size: 0.94rem;
+      align-items: center;
     }
 
     .nav a {
       padding-bottom: 2px;
       border-bottom: 1px solid transparent;
-      transition: color 180ms ease, border-color 180ms ease;
+      transition: color 180ms ease, border-color 180ms ease, transform 180ms ease;
     }
 
     .nav a:hover {
       color: var(--ink);
       border-color: var(--ink);
+    }
+
+    .nav-cv {
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--ink);
+      font-weight: 700;
+      border-bottom-color: var(--line) !important;
+    }
+
+    .nav-cv:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(20, 32, 43, 0.08);
+      border-color: var(--ink) !important;
     }
 
     .hero {
@@ -231,7 +239,9 @@
 
     .hero-actions,
     .hero-tags,
-    .tag-row {
+    .tag-row,
+    .mini-actions,
+    .contact-links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -267,6 +277,14 @@
     }
 
     .button-secondary {
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--ink);
+    }
+
+    .button-small {
+      min-height: 36px;
+      padding: 0 14px;
+      font-size: 0.85rem;
       background: rgba(255, 255, 255, 0.76);
       color: var(--ink);
     }
@@ -392,6 +410,16 @@
       color: var(--ink);
     }
 
+    .mini-actions {
+      margin-top: 18px;
+    }
+
+    .card-note {
+      margin-top: 12px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
     .split {
       display: grid;
       grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.94fr);
@@ -465,6 +493,16 @@
       line-height: 1.72;
     }
 
+    .citation {
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(20, 32, 43, 0.08);
+      font-size: 0.92rem;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -499,15 +537,9 @@
 
     .contact-panel {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-columns: minmax(0, 1fr);
       gap: 16px;
       align-items: end;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
     }
 
     .footer {
@@ -537,8 +569,7 @@
       .hero,
       .split,
       .cards,
-      .skills-grid,
-      .contact-panel {
+      .skills-grid {
         grid-template-columns: 1fr;
       }
 
@@ -549,8 +580,8 @@
         flex-direction: column;
       }
 
-      .contact-panel {
-        align-items: flex-start;
+      .nav {
+        justify-content: flex-start;
       }
     }
 
@@ -593,6 +624,7 @@
         <a href="#publication">Publication</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+        <a class="nav-cv" href="CV_Wenjia_Ge.pdf" target="_blank" rel="noopener">CV</a>
       </nav>
     </header>
 
@@ -613,11 +645,11 @@
           <a class="button button-secondary" href="https://github.com/Wenjia-Ge" target="_blank" rel="noopener">GitHub</a>
         </div>
         <div class="hero-tags" aria-label="Research areas">
-          <span class="pill">Point Cloud Processing</span>
+          <span class="pill">Robot Perception</span>
+          <span class="pill">Spatial Intelligence</span>
           <span class="pill">Medical Robotics Simulation</span>
-          <span class="pill">ROS2 Pipelines</span>
-          <span class="pill">STM32 Embedded Development</span>
-          <span class="pill">Method of Manufactured Solutions</span>
+          <span class="pill">STM32 Embedded Systems</span>
+          <span class="pill">Numerical Verification</span>
         </div>
       </div>
 
@@ -640,7 +672,7 @@
           <h2 class="aside-title">Highlights</h2>
           <div class="stat-grid">
             <div class="stat">
-              <span class="stat-number">3.89</span>
+              <span class="stat-number">3.93</span>
               <span class="stat-label">NYU GPA</span>
             </div>
             <div class="stat">
@@ -648,12 +680,12 @@
               <span class="stat-label">Author at ICONE30</span>
             </div>
             <div class="stat">
-              <span class="stat-number">107</span>
-              <span class="stat-label">TOEFL</span>
+              <span class="stat-number">4</span>
+              <span class="stat-label">Selected Projects</span>
             </div>
             <div class="stat">
-              <span class="stat-number">327</span>
-              <span class="stat-label">GRE</span>
+              <span class="stat-number">Robotics</span>
+              <span class="stat-label">Research Focus</span>
             </div>
           </div>
         </div>
@@ -675,10 +707,10 @@
         <div class="cards">
           <article class="card">
             <p class="meta">2026 - Present · AI4CE Lab, New York University</p>
-            <h3>Point Cloud Data Processing for Robot Training</h3>
+            <h3>Visual Spatial Data Processing for Robot Perception and Training</h3>
             <p>
-              Ongoing research on collecting and structuring visual-spatial data for robotic perception
-              and training workflows.
+              Ongoing research on collecting, structuring, and processing visual-spatial data for
+              robotic perception and robot learning workflows.
             </p>
             <ul class="detail-list">
               <li>Collect visual and spatial data with MetaCam across varied scenes for robot training pipelines.</li>
@@ -691,14 +723,18 @@
               <span class="tag">Robotics Data</span>
               <span class="tag">Spatial Computing</span>
             </div>
+            <div class="mini-actions">
+              <a class="button button-small" href="#">Project Summary</a>
+            </div>
+            <p class="card-note">Note: raw data is not public due to lab or dataset policy.</p>
           </article>
 
           <article class="card">
             <p class="meta">2025 - Present · Research Project, New York</p>
-            <h3>Sensor-Based Medical Robotics Simulation</h3>
+            <h3>Patient Specific Medical Robotics Simulation and Navigation</h3>
             <p>
               A patient-specific workflow for vascular modeling, path planning, and robot visualization
-              in minimally invasive medical robotics.
+              in minimally invasive medical robotics simulation.
             </p>
             <ul class="detail-list">
               <li>Developed a simulation workflow using 3D Slicer, VMTK, ROS2, RViz, and SlicerROS2.</li>
@@ -710,6 +746,10 @@
               <span class="tag">VMTK</span>
               <span class="tag">ROS2</span>
               <span class="tag">Medical Robotics</span>
+            </div>
+            <div class="mini-actions">
+              <a class="button button-small" href="#">Project Summary</a>
+              <a class="button button-small" href="#">Demo or Slides</a>
             </div>
           </article>
 
@@ -731,14 +771,18 @@
               <span class="tag">Error Analysis</span>
               <span class="tag">Scientific Computing</span>
             </div>
+            <div class="mini-actions">
+              <a class="button button-small" href="#">Read Paper</a>
+              <a class="button button-small" href="#">Project Summary</a>
+            </div>
           </article>
 
           <article class="card">
             <p class="meta">Embedded Systems Project · STM32L475 Discovery Board</p>
-            <h3>KinetiKey Gesture Unlock System</h3>
+            <h3>IMU Based Gesture Recognition System on STM32</h3>
             <p>
-              A motion-driven embedded unlock system built around IMU sensing, gesture encoding,
-              and onboard feedback.
+              A motion-driven embedded gesture recognition workflow built around IMU sensing,
+              gesture encoding, and onboard feedback on STM32.
             </p>
             <ul class="detail-list">
               <li>Implemented gyroscope calibration, three-step gesture recording, and dominant-axis matching logic.</li>
@@ -750,6 +794,10 @@
               <span class="tag">C</span>
               <span class="tag">IMU</span>
               <span class="tag">PlatformIO</span>
+            </div>
+            <div class="mini-actions">
+              <a class="button button-small" href="#">GitHub</a>
+              <a class="button button-small" href="#">Demo Video</a>
             </div>
           </article>
         </div>
@@ -791,31 +839,34 @@
           <div class="timeline-item">
             <div class="timeline-head">
               <h3>Education</h3>
-              <span class="timeline-date">2020 - 2026</span>
+              <span class="timeline-date">Academic Background</span>
             </div>
             <ul class="timeline-list">
-              <li>New York University, M.S. in Electrical and Electronics Engineering, 09/2024 - Expected 12/2026, GPA 3.89/4.00.</li>
-              <li>Shenzhen University, B.S. in Physics, 09/2020 - 07/2024, GPA 3.65/4.00.</li>
-              <li>Relevant coursework includes Digital Signal Processing, Probability and Stochastic Processes, Real-Time Embedded Systems, Computing Systems Architecture, and Applied Matrix Theory.</li>
+              <li><strong>New York University, Tandon School of Engineering</strong><br>M.S. in Electrical and Electronics Engineering<br>Expected December 2026<br>GPA 3.89 out of 4.00</li>
+              <li><strong>Shenzhen University</strong><br>B.S. in Physics<br>GPA 3.65 out of 4.00</li>
+              <li>Relevant coursework: Digital Signal Processing, Real-Time Embedded Systems, Computing Systems Architecture, Probability and Stochastic Processes, Applied Matrix Theory.</li>
             </ul>
           </div>
         </div>
 
         <aside id="publication" class="publication">
           <h2>Publication</h2>
-          <p class="meta">ICONE30 · Kyoto, Japan · May 21-26, 2023</p>
+          <p class="meta">ICONE30 · Kyoto, Japan · 2023</p>
           <h3>Application of the Method of Manufactured Solutions to Verify a Nuclear Reactor Physics Computational Code using the Method of Characteristics</h3>
           <p>
             First-author conference paper on numerical verification for reactor physics computation.
             The work studies the order of accuracy of flat-source and linear-source approximations in MoC.
           </p>
+          <div class="citation">
+            Wenjia Ge, et al. <em>Application of the Method of Manufactured Solutions to Verify a Nuclear Reactor Physics Computational Code using the Method of Characteristics.</em> ICONE30, Kyoto, Japan, 2023.
+          </div>
           <div class="quote">
             Using the Method of Manufactured Solutions, the study verifies that the flat-source
             approximation is second-order accurate and the linear-source approximation reaches
             fourth-order accuracy in planar geometry.
           </div>
           <div class="hero-actions">
-            <a class="button button-primary" href="ICONE30-1702_MMS_MoC.pdf" target="_blank" rel="noopener">Read Paper</a>
+            <a class="button button-primary" href="#">Read Paper</a>
             <a class="button button-secondary" href="CV_Wenjia_Ge.pdf" target="_blank" rel="noopener">Full CV</a>
           </div>
         </aside>
@@ -833,7 +884,7 @@
 
         <div class="skills-grid">
           <article class="card">
-            <h3>Programming & Computing</h3>
+            <h3>Programming and Computing</h3>
             <ul class="skill-list">
               <li>Python, C, MATLAB</li>
               <li>Scientific computing, numerical analysis, data analysis</li>
@@ -842,29 +893,29 @@
           </article>
 
           <article class="card">
-            <h3>Robotics & Embedded</h3>
+            <h3>Robotics and Embedded Systems</h3>
             <ul class="skill-list">
-              <li>ROS2, RViz, 3D Slicer, SlicerROS2, VMTK</li>
-              <li>Arduino, STM32, sensor signal processing</li>
-              <li>Robot visualization, validation workflows, tactile/contact sensing</li>
+              <li>ROS2, RViz, STM32, Arduino, PlatformIO</li>
+              <li>IMU sensing, sensor signal processing</li>
+              <li>Robot visualization and validation workflows</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3>Spatial Data & Research</h3>
+            <h3>Spatial and Medical Tools</h3>
             <ul class="skill-list">
+              <li>3D Slicer, VMTK, SlicerROS2</li>
               <li>Point cloud processing and visualization</li>
-              <li>Dataset preprocessing for robot training pipelines</li>
-              <li>Method of Manufactured Solutions, error analysis, technical writing</li>
+              <li>Medical robotics simulation and anatomical modeling</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3>Languages & Credentials</h3>
+            <h3>Research and Communication</h3>
             <ul class="skill-list">
-              <li>Chinese (native), English (fluent)</li>
-              <li>TOEFL 107, GRE 327</li>
-              <li>ACCA F1, F2, F3</li>
+              <li>Method of Manufactured Solutions, error analysis</li>
+              <li>Dataset preprocessing for robot training pipelines</li>
+              <li>Technical writing, presentation, research documentation</li>
             </ul>
           </article>
         </div>
@@ -878,14 +929,10 @@
             involving embodied AI, sensing, simulation, and embedded systems.
           </p>
           <div class="contact-links">
-            <a class="button button-primary" href="mailto:wg2349@nyu.edu">wg2349@nyu.edu</a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/wenjia-ge" target="_blank" rel="noopener">linkedin.com/in/wenjia-ge</a>
-            <a class="button button-secondary" href="https://github.com/Wenjia-Ge" target="_blank" rel="noopener">github.com/Wenjia-Ge</a>
+            <a class="button button-primary" href="mailto:wg2349@nyu.edu">Email · wg2349@nyu.edu</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/wenjia-ge" target="_blank" rel="noopener">LinkedIn · linkedin.com/in/wenjia-ge</a>
+            <a class="button button-secondary" href="https://github.com/Wenjia-Ge" target="_blank" rel="noopener">GitHub · github.com/Wenjia-Ge</a>
           </div>
-        </div>
-        <div>
-          <p><strong>Based in:</strong> New York, NY</p>
-          <p><strong>Phone:</strong> +1-646-824-9748</p>
         </div>
       </section>
     </main>
