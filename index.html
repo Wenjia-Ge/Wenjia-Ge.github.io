@@ -8,6 +8,9 @@
     name="description"
     content="Portfolio of Wenjia Ge, an NYU Tandon M.S. student working across robotics, embodied AI, medical simulation, embedded systems, and numerical methods."
   >
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -97,3 +100,813 @@
       backdrop-filter: blur(16px);
       box-shadow: 0 14px 30px rgba(20, 32, 43, 0.06);
     }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #f0b45f);
+      box-shadow: 0 0 0 8px rgba(217, 111, 50, 0.1);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .nav a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 180ms ease, border-color 180ms ease;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 22px;
+      align-items: stretch;
+      margin-bottom: 22px;
+    }
+
+    .hero-panel,
+    .card,
+    .timeline,
+    .publication,
+    .contact-panel {
+      background: var(--paper);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      background:
+        linear-gradient(140deg, rgba(255, 252, 248, 0.96), rgba(250, 244, 235, 0.82)),
+        radial-gradient(circle at top right, rgba(15, 122, 117, 0.16), transparent 28%);
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      top: -80px;
+      right: -70px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217, 111, 50, 0.18), transparent 68%);
+      pointer-events: none;
+    }
+
+    .eyebrow,
+    .pill,
+    .tag,
+    .stat-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .eyebrow {
+      padding: 9px 14px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(20, 32, 43, 0.08);
+      color: var(--muted);
+      font-size: 0.88rem;
+      letter-spacing: 0.02em;
+    }
+
+    h1,
+    h2,
+    .stat-number {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(3.1rem, 8vw, 5.8rem);
+      line-height: 0.92;
+    }
+
+    h1 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.82;
+    }
+
+    .hero-actions,
+    .hero-tags,
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-actions {
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 0.95rem;
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(20, 32, 43, 0.1);
+    }
+
+    .button-primary {
+      background: var(--ink);
+      color: #fff8ef;
+      border-color: transparent;
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--ink);
+    }
+
+    .hero-tags {
+      margin-top: 20px;
+    }
+
+    .pill {
+      padding: 9px 13px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(20, 32, 43, 0.08);
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .hero-aside {
+      display: grid;
+      gap: 16px;
+    }
+
+    .aside-block {
+      padding: 24px;
+      background: var(--paper-strong);
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .aside-title,
+    .card h3,
+    .timeline h3,
+    .publication h3,
+    .contact-panel h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .aside-copy,
+    .section-copy,
+    .meta,
+    .card p,
+    .timeline p,
+    .publication p,
+    .contact-panel p,
+    li {
+      color: var(--muted);
+      line-height: 1.72;
+    }
+
+    .aside-list,
+    .detail-list,
+    .timeline-list,
+    .skill-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 22px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 0.96;
+    }
+
+    .section-copy {
+      max-width: 620px;
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 24px;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 60px rgba(20, 32, 43, 0.14);
+    }
+
+    .meta {
+      margin: 0 0 14px;
+      font-size: 0.9rem;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .detail-list {
+      margin-top: 14px;
+    }
+
+    .tag-row {
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 7px 11px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(20, 32, 43, 0.08);
+      font-size: 0.82rem;
+      color: var(--ink);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.94fr);
+      gap: 18px;
+    }
+
+    .timeline,
+    .publication,
+    .contact-panel {
+      padding: 26px;
+    }
+
+    .timeline-item + .timeline-item {
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-head h3 {
+      margin-bottom: 0;
+    }
+
+    .timeline-date {
+      color: var(--teal);
+      font-size: 0.9rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .role {
+      margin: 0 0 12px;
+      font-size: 0.95rem;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .timeline-list li + li,
+    .detail-list li + li,
+    .skill-list li + li,
+    .aside-list li + li {
+      margin-top: 8px;
+    }
+
+    .publication {
+      display: grid;
+      gap: 14px;
+      background:
+        linear-gradient(155deg, rgba(255, 252, 248, 0.98), rgba(245, 239, 229, 0.9)),
+        radial-gradient(circle at top right, rgba(217, 111, 50, 0.12), transparent 32%);
+    }
+
+    .publication .meta {
+      margin-bottom: 0;
+    }
+
+    .quote {
+      padding: 16px 18px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      background: rgba(217, 111, 50, 0.08);
+      color: var(--ink);
+      font-size: 0.96rem;
+      line-height: 1.72;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .stat {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid rgba(20, 32, 43, 0.08);
+    }
+
+    .stat-number {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 2rem;
+      line-height: 0.95;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .js .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .split,
+      .cards,
+      .skills-grid,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar,
+      .section-header,
+      .timeline-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact-panel {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(calc(100% - 18px), var(--max-width));
+        padding-top: 14px;
+      }
+
+      .topbar,
+      .hero-panel,
+      .card,
+      .timeline,
+      .publication,
+      .contact-panel,
+      .aside-block {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: clamp(2.8rem, 16vw, 4rem);
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar reveal">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span>Wenjia Ge</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#publication">Publication</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-panel reveal">
+        <div class="eyebrow">Robotics · Embodied AI · Embedded Systems · Numerical Methods</div>
+        <h1>Building <span>research systems</span> from sensor data to robot behavior.</h1>
+        <p class="hero-copy">
+          I am Wenjia Ge, an M.S. student in Electrical and Electronics Engineering at NYU Tandon.
+          My work sits at the intersection of robotics, embodied AI, spatial data processing, embedded
+          development, and computational modeling. I am especially interested in how sensing,
+          representation, and verification can make robotic systems more capable and more reliable.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="CV_Wenjia_Ge.pdf" target="_blank" rel="noopener">View CV</a>
+          <a class="button button-secondary" href="mailto:wg2349@nyu.edu">Email</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/wenjia-ge" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button button-secondary" href="https://github.com/Wenjia-Ge" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="hero-tags" aria-label="Research areas">
+          <span class="pill">Point Cloud Processing</span>
+          <span class="pill">Medical Robotics Simulation</span>
+          <span class="pill">ROS2 Pipelines</span>
+          <span class="pill">STM32 Embedded Development</span>
+          <span class="pill">Method of Manufactured Solutions</span>
+        </div>
+      </div>
+
+      <aside class="hero-aside">
+        <div class="aside-block reveal">
+          <h2 class="aside-title">Current Focus</h2>
+          <p class="aside-copy">
+            Embodied AI, robotic perception, and spatial intelligence for intelligent and humanoid
+            robotic systems.
+          </p>
+          <ul class="aside-list">
+            <li>Processing point cloud and spatial data for robot learning datasets at NYU AI4CE Lab</li>
+            <li>Building simulation-based robotics workflows with 3D Slicer, VMTK, ROS2, and RViz</li>
+            <li>Developing embedded sensing and real-time interaction systems on STM32 platforms</li>
+            <li>Exploring robot learning, VLA models, and humanoid robotics as future research directions</li>
+          </ul>
+        </div>
+
+        <div class="aside-block reveal">
+          <h2 class="aside-title">Highlights</h2>
+          <div class="stat-grid">
+            <div class="stat">
+              <span class="stat-number">3.89</span>
+              <span class="stat-label">NYU GPA</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">1st</span>
+              <span class="stat-label">Author at ICONE30</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">107</span>
+              <span class="stat-label">TOEFL</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">327</span>
+              <span class="stat-label">GRE</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <main class="layout">
+      <section id="work" class="reveal">
+        <div class="section-header">
+          <div>
+            <h2>Selected Work</h2>
+            <p class="section-copy">
+              A selection of projects across robot perception, medical simulation, embedded systems,
+              and computational verification.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <p class="meta">2026 - Present · AI4CE Lab, New York University</p>
+            <h3>Point Cloud Data Processing for Robot Training</h3>
+            <p>
+              Ongoing research on collecting and structuring visual-spatial data for robotic perception
+              and training workflows.
+            </p>
+            <ul class="detail-list">
+              <li>Collect visual and spatial data with MetaCam across varied scenes for robot training pipelines.</li>
+              <li>Process raw sensing outputs into spatial point cloud representations for scene understanding.</li>
+              <li>Build preprocessing and visualization workflows that improve dataset quality and usability.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">MetaCam</span>
+              <span class="tag">Point Clouds</span>
+              <span class="tag">Robotics Data</span>
+              <span class="tag">Spatial Computing</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="meta">2025 - Present · Research Project, New York</p>
+            <h3>Sensor-Based Medical Robotics Simulation</h3>
+            <p>
+              A patient-specific workflow for vascular modeling, path planning, and robot visualization
+              in minimally invasive medical robotics.
+            </p>
+            <ul class="detail-list">
+              <li>Developed a simulation workflow using 3D Slicer, VMTK, ROS2, RViz, and SlicerROS2.</li>
+              <li>Processed CTA-based anatomical models and extracted vessel centerlines for pre-surgical planning.</li>
+              <li>Integrated sensor and device data for real-time visualization, validation, and signal analysis.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">3D Slicer</span>
+              <span class="tag">VMTK</span>
+              <span class="tag">ROS2</span>
+              <span class="tag">Medical Robotics</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="meta">11/2022 - 09/2023 · First-Author Conference Paper</p>
+            <h3>Method of Characteristics Accuracy Study</h3>
+            <p>
+              Undergraduate research on the spatial discretization accuracy of the Method of Characteristics,
+              with verification through the Method of Manufactured Solutions.
+            </p>
+            <ul class="detail-list">
+              <li>Analyzed flat-source and linear-source approximations in planar geometry.</li>
+              <li>Implemented MMS-based verification and evaluated error convergence across meshes and rays.</li>
+              <li>Published results in the 30th International Conference on Nuclear Engineering.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Numerical Methods</span>
+              <span class="tag">MMS</span>
+              <span class="tag">Error Analysis</span>
+              <span class="tag">Scientific Computing</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="meta">Embedded Systems Project · STM32L475 Discovery Board</p>
+            <h3>KinetiKey Gesture Unlock System</h3>
+            <p>
+              A motion-driven embedded unlock system built around IMU sensing, gesture encoding,
+              and onboard feedback.
+            </p>
+            <ul class="detail-list">
+              <li>Implemented gyroscope calibration, three-step gesture recording, and dominant-axis matching logic.</li>
+              <li>Used the LSM6DSL IMU, UART monitoring, and LED feedback for interaction and debugging.</li>
+              <li>Built the full flow in C on STM32Cube / PlatformIO for repeatable board-side execution.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">STM32</span>
+              <span class="tag">C</span>
+              <span class="tag">IMU</span>
+              <span class="tag">PlatformIO</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="split reveal">
+        <div class="timeline">
+          <h2>Experience</h2>
+          <p class="section-copy">
+            Research and engineering experience spanning embodied AI, hardware testing, and computational analysis.
+          </p>
+
+          <div class="timeline-item">
+            <div class="timeline-head">
+              <h3>AI² Robotics (Shenzhen) Science and Technology Co., Ltd.</h3>
+              <span class="timeline-date">10/2025 - 01/2026</span>
+            </div>
+            <p class="role">Research Intern, Embodied AI and Robotics · Shenzhen, China</p>
+            <ul class="timeline-list">
+              <li>Supported research and engineering work for embodied AI and service robotics systems.</li>
+              <li>Conducted subsystem testing and performance analysis to identify failure cases and improve validation workflows.</li>
+              <li>Collaborated across algorithm, hardware, and systems teams to communicate findings and improve reliability.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-head">
+              <h3>Shenzhen Zhi'ao Technology Co., Ltd.</h3>
+              <span class="timeline-date">07/2023 - 08/2023</span>
+            </div>
+            <p class="role">Hardware Test Engineer Intern · Shenzhen, China</p>
+            <ul class="timeline-list">
+              <li>Performed functional and performance testing on new hardware products.</li>
+              <li>Used automated testing tools and scripting to improve efficiency and expand test coverage.</li>
+              <li>Worked with hardware and software engineers on troubleshooting and recommendations that reduced failure rates.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-head">
+              <h3>Education</h3>
+              <span class="timeline-date">2020 - 2026</span>
+            </div>
+            <ul class="timeline-list">
+              <li>New York University, M.S. in Electrical and Electronics Engineering, 09/2024 - Expected 12/2026, GPA 3.89/4.00.</li>
+              <li>Shenzhen University, B.S. in Physics, 09/2020 - 07/2024, GPA 3.65/4.00.</li>
+              <li>Relevant coursework includes Digital Signal Processing, Probability and Stochastic Processes, Real-Time Embedded Systems, Computing Systems Architecture, and Applied Matrix Theory.</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside id="publication" class="publication">
+          <h2>Publication</h2>
+          <p class="meta">ICONE30 · Kyoto, Japan · May 21-26, 2023</p>
+          <h3>Application of the Method of Manufactured Solutions to Verify a Nuclear Reactor Physics Computational Code using the Method of Characteristics</h3>
+          <p>
+            First-author conference paper on numerical verification for reactor physics computation.
+            The work studies the order of accuracy of flat-source and linear-source approximations in MoC.
+          </p>
+          <div class="quote">
+            Using the Method of Manufactured Solutions, the study verifies that the flat-source
+            approximation is second-order accurate and the linear-source approximation reaches
+            fourth-order accuracy in planar geometry.
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="ICONE30-1702_MMS_MoC.pdf" target="_blank" rel="noopener">Read Paper</a>
+            <a class="button button-secondary" href="CV_Wenjia_Ge.pdf" target="_blank" rel="noopener">Full CV</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="skills" class="reveal">
+        <div class="section-header">
+          <div>
+            <h2>Skills</h2>
+            <p class="section-copy">
+              Tools and methods I use across robotics research, embedded implementation, and scientific computing.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="card">
+            <h3>Programming & Computing</h3>
+            <ul class="skill-list">
+              <li>Python, C, MATLAB</li>
+              <li>Scientific computing, numerical analysis, data analysis</li>
+              <li>PlatformIO, Simulink, GitHub</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Robotics & Embedded</h3>
+            <ul class="skill-list">
+              <li>ROS2, RViz, 3D Slicer, SlicerROS2, VMTK</li>
+              <li>Arduino, STM32, sensor signal processing</li>
+              <li>Robot visualization, validation workflows, tactile/contact sensing</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Spatial Data & Research</h3>
+            <ul class="skill-list">
+              <li>Point cloud processing and visualization</li>
+              <li>Dataset preprocessing for robot training pipelines</li>
+              <li>Method of Manufactured Solutions, error analysis, technical writing</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Languages & Credentials</h3>
+            <ul class="skill-list">
+              <li>Chinese (native), English (fluent)</li>
+              <li>TOEFL 107, GRE 327</li>
+              <li>ACCA F1, F2, F3</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-panel reveal">
+        <div>
+          <h2>Contact</h2>
+          <p>
+            I am interested in research, robotics engineering, and interdisciplinary projects
+            involving embodied AI, sensing, simulation, and embedded systems.
+          </p>
+          <div class="contact-links">
+            <a class="button button-primary" href="mailto:wg2349@nyu.edu">wg2349@nyu.edu</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/wenjia-ge" target="_blank" rel="noopener">linkedin.com/in/wenjia-ge</a>
+            <a class="button button-secondary" href="https://github.com/Wenjia-Ge" target="_blank" rel="noopener">github.com/Wenjia-Ge</a>
+          </div>
+        </div>
+        <div>
+          <p><strong>Based in:</strong> New York, NY</p>
+          <p><strong>Phone:</strong> +1-646-824-9748</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer reveal">
+      Designed as a research-focused portfolio for Wenjia Ge.
+    </footer>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
