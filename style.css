@@ -406,6 +406,8 @@ a:hover { text-decoration-thickness: 2px; }
 @media (max-width: 860px) {
   body { font-size: 1.05rem; }
 
+  .nav__inner > nav { width: 100%; min-width: 0; }
+
   .nav ul {
     width: 100%;
     overflow-x: auto;
