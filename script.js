@@ -15,8 +15,8 @@
   }
 
   /* Email link, assembled here so the address is not sitting in the HTML. */
-  const user = 'wenjia586';
-  const host = 'gmail.com';
+  const user = 'wg2349';
+  const host = 'nyu.edu';
   document.querySelectorAll('[data-email]').forEach((a) => {
     a.href = 'mailto:' + user + '@' + host;
     if (a.dataset.email === 'show') a.textContent = user + '@' + host;
