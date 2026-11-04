@@ -77,8 +77,12 @@
                 <dd>B.S. Physics, 2020 to 2024. GPA 3.65. Outstanding Undergraduate Thesis Award.</dd>
               </div>
               <div>
+                <dt>Honors</dt>
+                <dd>NYU Violet Internship and Research Award, Fall 2026, for research in the AI4CE Lab. Mentor Scholarship, NYU Tandon, Fall 2026.</dd>
+              </div>
+              <div>
                 <dt>Coursework</dt>
-                <dd>Digital Signal Processing, Real-Time Embedded Systems, Computing Systems Architecture, Probability and Stochastic Processes, Applied Matrix Theory.</dd>
+                <dd>Digital Signal Processing, Real-Time Embedded Systems, Computing Systems Architecture, Machine Learning, Interactive Medical Robotics, Physics of Nanoelectronics, Physics of Quantum Computing, Probability and Stochastic Processes, Applied Matrix Theory.</dd>
               </div>
             </dl>
           </div>
@@ -100,18 +104,20 @@
             <div>
               <h3>Visual spatial data for robot perception and training</h3>
               <p class="entry__meta">NYU AI4CE Lab, advised by Prof. Chen Feng, 2026 to present</p>
-              <p>I collect visual and spatial data with MetaCam across indoor and outdoor scenes, process the raw output into point clouds and 3D scene representations, and build preprocessing and visualization workflows that raise dataset quality for robot training and world models. I served as a student leader on the lab's Wanderland project, onboarding new members and coordinating team logistics. <a href="https://ai4ce.github.io/wanderland/" rel="noopener">Wanderland project page</a>. Raw data is not public because of lab policy.</p>
-              <ul class="tags"><li>MetaCam</li><li>Point clouds</li><li>3D Gaussian Splatting</li><li>Dataset quality</li></ul>
+              <p>I collect visual and spatial data with MetaCam across indoor and outdoor scenes and process the raw output into point clouds and 3D scene representations. I inspect reconstructions in CloudCompare and MeshLab, flag artifacts, and build preprocessing and visualization workflows that raise dataset quality for robot training and world models. I also build HPC workflows for ingestion, 3D Gaussian Splatting reconstruction, and quality control of large-scale navigation data.</p>
+              <p>I am a student leader on the lab's Wanderland project, a vision-language navigation benchmark built on real-world 3D reconstructions and a CVPR 2026 Highlight. I collect data, track the team's collection progress, and onboard new members. <a href="https://ai4ce.github.io/wanderland/" rel="noopener">Wanderland project page</a>. Raw data is not public because of lab policy.</p>
+              <ul class="tags"><li>MetaCam</li><li>Point clouds</li><li>3D Gaussian Splatting</li><li>HPC workflows</li><li>Dataset quality</li></ul>
             </div>
             <svg class="motif" data-motif="cloud" viewBox="0 0 136 112" aria-hidden="true"></svg>
           </article>
 
           <article class="entry">
             <div>
-              <h3>Patient-specific medical robotics simulation</h3>
-              <p class="entry__meta">Surgical concentric tube robot, advised by Prof. Rui Li</p>
-              <p>A simulation workflow for vascular modeling, path planning, and robot visualization in minimally invasive surgery research. It models the robot's curvature and motion inside constrained anatomy. I processed CTA-based anatomical models, extracted vessel centerlines with VMTK, and built the pipeline from a 3D Systems Touch haptic device through ROS2 into RViz and 3D Slicer. I handled hardware integration, real-time visualization, and validation. Next steps are tip tracking, coordinate alignment, and measuring progress along the vessel centerline.</p>
-              <ul class="tags"><li>ROS2 Jazzy</li><li>3D Slicer</li><li>SlicerROS2</li><li>VMTK</li><li>Haptics</li></ul>
+              <h3>Medical robotics: surgical navigation and tactile sensing</h3>
+              <p class="entry__meta">Advised by Prof. Rui Li, Feb to Aug 2026</p>
+              <p>A simulation workflow for vascular modeling, path planning, and robot visualization in minimally invasive surgery research. It models the robot's curvature and motion inside constrained anatomy. I processed CTA-based anatomical models, extracted vessel centerlines with VMTK, and built the pipeline from a 3D Systems Touch haptic device through ROS2 into RViz and 3D Slicer. I handled hardware integration, real-time visualization, and validation, and resolved instability from WSL2 and USB passthrough.</p>
+              <p>On the sensing side, I set up and validated two tactile sensors with an Arduino and Python (pyserial) workflow that streams, plots, and analyzes both channels in real time. I characterized baseline noise and contact response, tuned detection thresholds from measured ADC ranges, and measured cross-talk between channels during simultaneous operation. I also explored waterproof encapsulation with PDMS, Ecoflex, and Parylene C, and defined bare-versus-coated metrics for sensitivity, baseline stability, noise, and response time.</p>
+              <ul class="tags"><li>ROS2 Jazzy</li><li>3D Slicer</li><li>SlicerROS2</li><li>VMTK</li><li>Haptics</li><li>Tactile sensing</li><li>Arduino</li></ul>
             </div>
             <svg class="motif" data-motif="tube" viewBox="0 0 136 112" aria-hidden="true"></svg>
           </article>
@@ -141,8 +147,8 @@
             <div>
               <h3>Sb<sub>2</sub>S<sub>3</sub> thin-film solar cells</h3>
               <p class="entry__meta">Undergraduate thesis, Outstanding Thesis Award</p>
-              <p>I fabricated CdS and Sb<sub>2</sub>S<sub>3</sub> thin films by chemical bath deposition and built planar heterojunction solar cells from them. I measured external quantum efficiency with a monochromator and spectrometer setup.</p>
-              <ul class="tags"><li>Thin films</li><li>Solar cells</li><li>EQE measurement</li></ul>
+              <p>I fabricated CdS and Sb<sub>2</sub>S<sub>3</sub> thin films by chemical bath deposition and built planar FTO/CdS/Sb<sub>2</sub>S<sub>3</sub>/Spiro-OMeTAD/Au solar cells from them. I tested a thioacetamide surface treatment against untreated control devices and characterized both with XRD, SEM, contact-angle, J-V, and EQE measurements. The treatment reduced surface defects and porosity and raised power conversion efficiency from 4.43% to 5.43%. I operated the monochromator and spectrometer setup for the EQE measurements myself.</p>
+              <ul class="tags"><li>Thin films</li><li>Solar cells</li><li>XRD and SEM</li><li>J-V and EQE</li></ul>
             </div>
             <svg class="motif" data-motif="film" viewBox="0 0 136 112" aria-hidden="true"></svg>
           </article>
@@ -177,7 +183,7 @@
               <div>
                 <h3>Research Intern, Embodied AI and Robotics</h3>
                 <p class="job__org">AI² Robotics (Shenzhen) Science and Technology Co., Ltd.</p>
-                <p>Supported research and engineering work on embodied AI and service robotics systems. Ran subsystem tests and performance analysis to find failure cases and improve validation workflows, and worked across algorithm, hardware, and systems teams to share findings and improve reliability. Ran three technical demos for external partners. Outcomes included partnerships with one company in Dubai and two in Singapore.</p>
+                <p>Validated robot modules on their own, then evaluated them in the perception, decision, and action loop across seven subsystems: perception, localization and mapping, task planning, motion control, manipulation, communications, and safety. I designed test protocols and metrics for each, injected message delay, packet loss, sensor disconnection, and process restarts to measure fault detection and recovery, and documented failure cases with the algorithm, hardware, and systems teams. I also did competitor benchmarking and product comparisons. I hosted three technical demos for external partners and wrote the scripts and materials myself. Outcomes included partnerships with one company in Dubai and two in Singapore.</p>
               </div>
             </li>
             <li class="job" data-kind="industry">
@@ -185,15 +191,15 @@
               <div>
                 <h3>Content Marketing and Community Outreach</h3>
                 <p class="job__org">Kimber Health, New York</p>
-                <p>Produced product communication and health insurance guides for international students, researched coverage options, designed the visuals, and did in-person outreach in New York as a community ambassador.</p>
+                <p>Produced product communication and health insurance guides for international students at NYU, UCLA, and UChicago, comparing cost, eligibility, and deadlines for each school. Wrote the FAQs and posts, designed the visuals, hosted offline events, and did in-person outreach in New York as a community ambassador. I logged prospective-customer inquiries and follow-ups in Salesforce. One RED post earned about 5,000 likes and saves.</p>
               </div>
             </li>
             <li class="job" data-kind="research">
-              <p class="job__when">2026 to present</p>
+              <p class="job__when">Apr 2026 to present</p>
               <div>
                 <h3>Research Assistant</h3>
                 <p class="job__org">NYU AI4CE Lab, New York</p>
-                <p>Supported robotics and world-model data collection, quality review, and dataset preparation. Weekly research meetings with Prof. Chen Feng.</p>
+                <p>Collect and process spatial data with MetaCam, build HPC preprocessing and 3D Gaussian Splatting workflows, and review dataset quality for robotics and world-model training. Student leader on the Wanderland project. Weekly research meetings with Prof. Chen Feng.</p>
               </div>
             </li>
             <li class="job" data-kind="industry">
@@ -201,7 +207,7 @@
               <div>
                 <h3>Hardware Test Engineer Intern</h3>
                 <p class="job__org">Shenzhen Zhi'ao Technology Co., Ltd.</p>
-                <p>Ran functional and performance tests on new hardware products, and used automated testing tools and scripting to raise efficiency and widen test coverage. Worked with hardware and software engineers on troubleshooting and recommendations that contributed to a 15% reduction in hardware failure rates.</p>
+                <p>Tested Intel N97, N100, i3, and i5 and Rockchip RK3568 and RK3588 boards and industrial PCs on Windows and Ubuntu, covering boot, thermal throttling, DDR4 and DDR5 and NVMe compatibility, and 24 and 48 hour sustained-load stability. Verified RS232 and RS485 serial, Ethernet, Wi-Fi and Bluetooth, multi-display, and GPIO interfaces, writing C and Python test scripts for PLCs, industrial cameras, temperature sensors, and relays. Documented failures and worked with hardware and software engineers on fixes that contributed to a 15% reduction in hardware failure rates.</p>
               </div>
             </li>
           </ol>
@@ -213,7 +219,7 @@
       <div class="wrap">
         <h2 class="rail" id="creator-title">Creator work</h2>
         <div class="content prose">
-          <p class="lead">I run creator accounts on Douyin, Xiaohongshu, and other platforms, with 150,000+ combined followers. About 60,000 of them are on Douyin.</p>
+          <p class="lead">I run creator accounts on Douyin, Xiaohongshu, and other platforms, with 160,000+ combined followers. About 60,000 of them are on Douyin.</p>
           <p>A new account I started grew from 0 to 10,000 followers in one month. I got there by testing themes, formats, hooks, posting times, and visual direction, then keeping what the audience responded to.</p>
           <p>I have also worked with brands on Xiaohongshu, including paid sponsored posts and KOC (key opinion consumer) collaborations.</p>
           <blockquote class="pull">Attention is data. I write a hook, publish, read the response, and adjust.</blockquote>
@@ -232,7 +238,7 @@
               <div>
                 <h3>Teaching Assistant, Digital Signal Processing I</h3>
                 <p class="job__org">NYU Tandon, ECE 6113 / BE 6403</p>
-                <p>Run the weekly online sessions, manage lecture recordings, and handle course logistics on Zoom and Brightspace.</p>
+                <p>Grade student work and answer students' questions on Digital Signal Processing concepts. I also run the weekly online sessions, manage lecture recordings, and handle course logistics on Zoom and Brightspace.</p>
               </div>
             </li>
             <li class="job">
@@ -246,11 +252,12 @@
           </ol>
 
           <dl class="skills">
-            <div><dt>Programming and computing</dt><dd>C, C++, Python, MATLAB, Simulink, Verilog, SQL, scientific computing, numerical analysis, data analysis</dd></div>
-            <div><dt>Embedded and sensing</dt><dd>STM32 (ADC, DMA, timers, UART, SPI, I2C), Arduino, PlatformIO, IMU sensing, sensor and hardware integration, signal processing</dd></div>
-            <div><dt>Robotics and 3D</dt><dd>ROS2 Jazzy, RViz, 3D Slicer, SlicerROS2, VMTK, MetaCam, point-cloud processing, 3D Gaussian Splatting reconstruction</dd></div>
+            <div><dt>Programming and computing</dt><dd>C, C++, Python (pandas, NumPy, matplotlib), MATLAB, Simulink, Verilog, SQL, REST and OpenAI APIs, scientific computing, numerical analysis, data analysis</dd></div>
+            <div><dt>Embedded and sensing</dt><dd>STM32 (ADC, DMA, timers, UART, SPI, I2C), Arduino, PlatformIO, IMU sensing, tactile sensors, oscilloscope debugging, sensor and hardware integration, signal processing</dd></div>
+            <div><dt>Robotics and 3D</dt><dd>ROS2 Jazzy, RViz, 3D Slicer, SlicerROS2, VMTK, MetaCam, CloudCompare, MeshLab, point-cloud processing, 3D Gaussian Splatting reconstruction, HPC data workflows</dd></div>
+            <div><dt>Materials and devices</dt><dd>Chemical bath deposition, thin-film and solar-cell fabrication, XRD, SEM, J-V and EQE measurement</dd></div>
             <div><dt>Research and communication</dt><dd>Method of Manufactured Solutions, error analysis, dataset preprocessing, technical writing, presentations, audience research</dd></div>
-            <div><dt>Working tools</dt><dd>Git, GitHub, Linux, Notion, Airtable</dd></div>
+            <div><dt>Working tools</dt><dd>Git, GitHub, Linux, Claude Code, Codex, Jira, Salesforce, Notion, Airtable, Excel, Google Workspace</dd></div>
           </dl>
         </div>
       </div>
@@ -270,7 +277,7 @@
             <a class="btn btn--cream" href="CV_Wenjia_Ge.pdf">Download CV</a>
             <a class="btn btn--cream" href="resume-industry.pdf" data-file hidden>Industry resume</a>
           </p>
-          <p class="foot">Last updated October 2026.</p>
+          <p class="foot">Last updated November 2026.</p>
         </div>
       </div>
     </section>
