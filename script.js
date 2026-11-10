@@ -51,7 +51,7 @@
   });
 
   /* Current section in the navigation */
-  const links = Array.from(document.querySelectorAll('.nav ul a'));
+  const links = Array.from(document.querySelectorAll('.nav ul a[href^="#"]'));
   if ('IntersectionObserver' in window) {
     const seen = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

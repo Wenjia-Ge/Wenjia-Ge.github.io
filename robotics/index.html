@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wenjia Ge · Robotics and 3D perception</title>
+  <meta name="description" content="Wenjia Ge: Robot perception and navigation in real places, 3D reconstruction, and human-in-the-loop robotic systems.">
+  <meta name="theme-color" content="#FBF7F4">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wenjia Ge · Robotics and 3D perception">
+  <meta property="og:description" content="Wenjia Ge: Robot perception and navigation in real places, 3D reconstruction, and human-in-the-loop robotic systems.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='%23D98BA0'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__name" href="../">Wenjia Ge</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#background">Background</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="../">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="top">
+      <div class="hero__text">
+        <p class="hero__kicker">Wenjia Ge · Robotics and 3D perception</p>
+        <h1 class="h1--page">Robot perception and navigation in real places.</h1>
+        <p class="hero__meta">M.S. in Electrical Engineering, NYU Tandon, graduating December 2026. B.S. in Physics, Shenzhen University.</p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="../cv/robotics/Wenjia_Ge_CV.pdf">Download CV</a>
+          <a class="btn btn--line" href="#work">Relevant work</a>
+        </div>
+        <p class="hero__links">
+          <a href="https://www.linkedin.com/in/wenjia-ge" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Wenjia-Ge" rel="noopener">GitHub</a>
+          <a data-email href="#contact">Email</a>
+        </p>
+      </div>
+      <figure class="hero__figure">
+        <canvas id="cloud" role="img" aria-label="Animated point cloud of a branching blood vessel"></canvas>
+        <figcaption>A branching vessel as a point cloud, the kind of anatomy my surgical robot simulation navigates.</figcaption>
+      </figure>
+    </section>
+
+    <section class="band" id="interests" aria-labelledby="interests-title">
+      <div class="wrap">
+        <h2 class="rail" id="interests-title">Research interests</h2>
+        <div class="content prose">
+            <p>I want robots to perceive and move through real environments more reliably: navigating accurately, avoiding obstacles, and recognizing the state of the people around them.</p>
+            <p>My work so far sits on the data and systems side of that problem. At the AI4CE Lab I build real-world 3D datasets for embodied AI and world models. In medical robotics I built a human-in-the-loop pipeline from a haptic device into a surgical simulation. In industry I tested robots across the full perception, decision, and action loop. I am also exploring robot learning, vision-language-action models, and humanoid robotics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--blush" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 class="rail" id="work-title">Most relevant work</h2>
+        <div class="content">
+          <article class="entry">
+            <div>
+              <h3>Visual spatial data for robot perception and training</h3>
+              <p class="entry__meta">NYU AI4CE Lab, advised by Prof. Chen Feng, 2026 to present</p>
+              <p>I collect visual and spatial data with MetaCam across indoor and outdoor scenes and process the raw output into point clouds and 3D scene representations. I inspect reconstructions in CloudCompare and MeshLab, flag artifacts, and build preprocessing and visualization workflows that raise dataset quality for robot training and world models. I also build HPC workflows for ingestion, 3D Gaussian Splatting reconstruction, and quality control of large-scale navigation data.</p>
+              <p>I am a student leader on the lab's Wanderland project, a vision-language navigation benchmark built on real-world 3D reconstructions and a CVPR 2026 Highlight. I collect data, track the team's collection progress, and onboard new members. <a href="https://ai4ce.github.io/wanderland/" rel="noopener">Wanderland project page</a>. Raw data is not public because of lab policy.</p>
+              <ul class="tags"><li>MetaCam</li><li>Point clouds</li><li>3D Gaussian Splatting</li><li>HPC workflows</li><li>Dataset quality</li></ul>
+            </div>
+            <svg class="motif" data-motif="cloud" viewBox="0 0 136 112" aria-hidden="true"></svg>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>Medical robotics: surgical navigation and tactile sensing</h3>
+              <p class="entry__meta">Research Assistant, advised by Prof. Rui Li, Feb to Aug 2026</p>
+              <p>A simulation workflow for vascular modeling, path planning, and robot visualization in minimally invasive surgery research. It models the robot's curvature and motion inside constrained anatomy. I processed CTA-based anatomical models, extracted vessel centerlines with VMTK, and built the pipeline from a 3D Systems Touch haptic device through ROS2 into RViz and 3D Slicer. I handled hardware integration, real-time visualization, and validation, and resolved instability from WSL2 and USB passthrough.</p>
+              <p>On the sensing side, I set up and validated two tactile sensors with an Arduino and Python (pyserial) workflow that streams, plots, and analyzes both channels in real time. I characterized baseline noise and contact response, tuned detection thresholds from measured ADC ranges, and measured cross-talk between channels during simultaneous operation. I also explored waterproof encapsulation with PDMS, Ecoflex, and Parylene C, and defined bare-versus-coated metrics for sensitivity, baseline stability, noise, and response time.</p>
+              <ul class="tags"><li>ROS2 Jazzy</li><li>3D Slicer</li><li>SlicerROS2</li><li>VMTK</li><li>Haptics</li><li>Tactile sensing</li><li>Arduino</li></ul>
+            </div>
+            <svg class="motif" data-motif="tube" viewBox="0 0 136 112" aria-hidden="true"></svg>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>Testing robots across the perception, decision, and action loop</h3>
+              <p class="entry__meta">Research Intern, Embodied AI and Robotics, AI² Robotics, Shenzhen, Oct 2025 to Jan 2026</p>
+              <p>I validated robot modules on their own, then evaluated them in the full loop across seven subsystems: perception, localization and mapping, task planning, motion control, manipulation, communications, and safety. For each one I designed test protocols and metrics, such as recognition accuracy under changing light and occlusion, localization drift and recovery, and stopping distance on emergency stop.</p>
+              <p>I injected message delay, packet loss, sensor disconnection, and process restarts to measure fault detection and recovery, and documented failure cases with the algorithm, hardware, and systems teams.</p>
+              <ul class="tags"><li>System validation</li><li>Fault injection</li><li>Test protocols</li><li>Embodied AI</li></ul>
+            </div>
+            <svg class="motif" data-motif="cloud" viewBox="0 0 136 112" aria-hidden="true"></svg>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>IMU-based gesture recognition on STM32</h3>
+              <p class="entry__meta">Individual embedded systems project, STM32L475 Discovery board</p>
+              <p>A motion-driven gesture recognition system built around IMU sensing, gesture encoding, and onboard feedback. I implemented gyroscope calibration, three-step gesture recording, and dominant-axis matching, using the LSM6DSL IMU, UART monitoring, and LED feedback for interaction and debugging. The whole flow is written in C on STM32Cube and PlatformIO.</p>
+              <ul class="tags"><li>STM32</li><li>C</li><li>IMU</li><li>PlatformIO</li></ul>
+            </div>
+            <svg class="motif" data-motif="imu" viewBox="0 0 136 112" aria-hidden="true"></svg>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="background" aria-labelledby="background-title">
+      <div class="wrap">
+        <h2 class="rail" id="background-title">Background</h2>
+        <div class="content">
+          <h3 class="subhead">Other work</h3>
+          <ul class="others">
+            <li><h3>Verifying the Method of Characteristics</h3><p>First-author paper, ICONE30, 2023. Numerical verification and error analysis.</p></li>
+            <li><h3>Sb<sub>2</sub>S<sub>3</sub> thin-film solar cells</h3><p>Undergraduate thesis. Efficiency from 4.43% to 5.43% with a surface treatment.</p></li>
+            <li><h3>Human–AI dialogue data pipeline</h3><p>Python and SQL tooling for creative-diversity analysis.</p></li>
+            <li><h3>Teaching Assistant, Digital Signal Processing I</h3><p>NYU Tandon, Fall 2026.</p></li>
+          </ul>
+            <dl class="facts">
+              <div><dt>NYU Tandon School of Engineering</dt><dd>M.S. Electrical Engineering, 2024 to December 2026. GPA 3.93.</dd></div>
+              <div><dt>Shenzhen University</dt><dd>B.S. Physics, 2020 to 2024. GPA 3.65. Outstanding Undergraduate Thesis Award.</dd></div>
+              <div><dt>Honors</dt><dd>NYU Violet Internship and Research Award, Fall 2026, for research in the AI4CE Lab. Mentor Scholarship, NYU Tandon, Fall 2026.</dd></div>
+              <div><dt>Coursework</dt><dd>Interactive Medical Robotics, Machine Learning, Digital Signal Processing, Real-Time Embedded Systems, Computing Systems Architecture, Probability and Stochastic Processes, Applied Matrix Theory.</dd></div>
+            </dl>
+          <p class="also">I also have pages for other directions: <a href="../physics/">Physics and devices</a> <a href="../hci/">Human-centered technology</a> <a href="../education/">Learning technology</a> <a href="../marketing/">Technology, audiences, and markets</a>. <a href="../">Everything on one page</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--plum" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 class="rail" id="contact-title">Contact</h2>
+        <div class="content">
+          <p class="contact__lead">Write to me about research, roles, or collaborations.</p>
+          <ul class="contact__links">
+            <li><a data-email="show" href="#contact">Email</a><noscript>wg2349 at nyu dot edu</noscript></li>
+            <li><a href="https://www.linkedin.com/in/wenjia-ge" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/Wenjia-Ge" rel="noopener">GitHub</a></li>
+          </ul>
+          <p class="contact__files">
+            <a class="btn btn--cream" href="../cv/robotics/Wenjia_Ge_CV.pdf">Download CV</a>
+          </p>
+          <p class="foot">Last updated November 2026.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
